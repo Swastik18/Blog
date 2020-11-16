@@ -8,7 +8,7 @@
       <%= blog.createdAt.toLocaleDateString() %>
     </div>
     <a href="/blogs" class="btn btn-secondary">All Blogs</a>
-    <h1 class="mb-1"><%= blog.description %></h1>
+    <h1 class="card-subtitle mt-3 mb-2"><%= blog.description %></h1>
     <p class="card-text"><%= blog.markdown%></p>
   </div>
     <% if(currentUser && blog.author.equals(currentUser._id)) {%>
