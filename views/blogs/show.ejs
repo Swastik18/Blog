@@ -11,7 +11,15 @@
       <%= blog.createdAt.toLocaleDateString() %>
     </div>
     <h1 class="card-subtitle mt-3 mb-2"><%= blog.description %></h1>
-    <p class="card-text"><%= blog.markdown%></p>
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p><%= blog.markdown%></p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Submitted by <cite title="Source Title"><%= blog.author.username%></cite>
+      </figcaption>
+    </figure>
+
   </div>
     <% if(currentUser && blog.author.equals(currentUser._id)) {%>
       <div class="card-body">
@@ -21,10 +29,6 @@
           </form>
       </div>
     <%}%>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Submitted by <%= blog.author.username%></li>
-    </ul>
-    
     <% if(currentUser) {%>
     <h2>Leave A Review</h2>
       <form action="/blogs/<%=blog._id%>/reviews" method="POST" class="mb-3">
