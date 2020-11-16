@@ -2,12 +2,15 @@
 <link rel="stylesheet" href="/stylesheets/stars.css">
 
 <div class="container">
-    <h1 class="mb-1"><%= blog.title %></h1>
+  <div class="card-body">
+    <h1 class="card-title mb-1"><%= blog.title %></h1>
     <div class="text-muted mb-2">
       <%= blog.createdAt.toLocaleDateString() %>
     </div>
     <a href="/blogs" class="btn btn-secondary">All Blogs</a>
     <h1 class="mb-1"><%= blog.description %></h1>
+    <p class="card-text"><%= blog.markdown%></p>
+  </div>
     <% if(currentUser && blog.author.equals(currentUser._id)) {%>
       <div class="card-body">
         <a class="card-link btn btn-info" href="/blogs/<%=blog._id%>/edit">Edit</a>
