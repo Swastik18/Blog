@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%>
+
+
+<div class="container">
+    <h1 class="mb-4">Blogs</h1>
+
+    <% blogs.forEach(blog => { %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4 class="card-title"><%= blog.title %></h4>
+          <div class="card-subtitle text-muted mb-2">
+            <%= blog.createdAt.toLocaleDateString() %>
+          </div>
+          <div class="card-text mb-2"><%= blog.description %></div>
+          <a href="blogs/<%= blog._id %>" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
