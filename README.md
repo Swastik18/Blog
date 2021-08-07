@@ -1,13 +1,15 @@
 # Blog Application
 
+[Live Site](https://infinite-fortress-57913.herokuapp.com/blogs "blog")
 
-This is a website where users can create and review blogs. In order to review or create a blog, you must have an account. 
+![blog](https://user-images.githubusercontent.com/59872341/128589883-72c52465-6fa8-4879-b412-010f30631a7b.png)
 
-This project was created using Node.js, Express, MongoDB, and Bootstrap. Passport.js was used to handle authentication.  
+# Introduction
 
-## Features
-* Users can create, edit, and remove blogs
-* Users can review blogs once, and edit or remove their review
+This web app is called "Blog". In this app, users can create, read, update, and delete each other's blog with authentication and authorization.
 
+### Setup to start the development server
 
-
+```bash
+    npm i && npm start
+```
